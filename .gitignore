@@ -7,6 +7,17 @@ dist/
 *.vsix
 *.tsbuildinfo
 
+# Claude Code & CLI
+.agents/
+skills-lock.json
+payload.json
+
+# Test Workspaces & Temp Files
+test-workspace/
+HelloWorld.md
+*.tmp
+*.temp
+
 # Logs
 logs/
 *.log
@@ -32,11 +43,8 @@ coverage/
 
 # Environment Variables
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
 
-# Project Specific (Auto-generated hooks for subagent)
-.github/hooks/on-stop.js
-.github/hooks/hooks.json
+# Project Specific
+.github/hooks/
+.agents
