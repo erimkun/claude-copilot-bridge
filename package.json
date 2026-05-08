@@ -1,0 +1,41 @@
+{
+    "name":  "claude-copilot-bridge",
+    "displayName":  "Claude Copilot Bridge",
+    "publisher":  "erimkun",
+    "icon":  "icon.png",
+    "description":  "Programmatic bridge between Claude and VS Code Copilot UI",
+    "version":  "0.0.1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/erimkun/claude-copilot-bridge"
+    },
+    "engines":  {
+                    "vscode":  "^1.85.0"
+                },
+    "categories":  [
+                       "Other"
+                   ],
+    "activationEvents":  [
+                             "onStartupFinished"
+                         ],
+    "main":  "./out/extension.js",
+    "contributes":  {
+                        "commands":  [
+                                         {
+                                             "command":  "claude-copilot-bridge.start",
+                                             "title":  "Start Claude Copilot Bridge Server"
+                                         }
+                                     ]
+                    },
+    "scripts":  {
+                    "vscode:prepublish":  "npm run compile",
+                    "compile":  "tsc -p ./",
+                    "watch":  "tsc -watch -p ./",
+                    "pretest":  "npm run compile \u0026\u0026 npm run lint"
+                },
+    "devDependencies":  {
+                            "@types/vscode":  "^1.85.0",
+                            "@types/node":  "18.x",
+                            "typescript":  "^5.3.3"
+                        }
+}
