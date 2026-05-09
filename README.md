@@ -1,6 +1,6 @@
 # Claude Copilot Bridge
 
-<iframe src="https://github.com/sponsors/erimkun/button" title="Sponsor erimkun" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-erimkun-DB61A2?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/erimkun)
 [![GitHub](https://img.shields.io/badge/GitHub-erimkun-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/erimkun)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Erden%20Erim%20Aydo%C4%9Fdu-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erden-erim-aydoğdu)
 
