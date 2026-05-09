@@ -1,4 +1,9 @@
-﻿# Copilot Subagent Workflow
+﻿---
+name: copilot-subagent
+description: Workflow to delegate coding tasks, bulk refactors, or specialized edits to GitHub Copilot Chat through the local bridge extension.
+---
+
+# Copilot Subagent Workflow
 
 Use this skill when you need to delegate coding tasks, bulk refactors, or specialized edits to GitHub Copilot Chat through the local bridge extension. This allows you to work in parallel with Copilot or have Copilot utilize its own edit tools on the codebase.
 
@@ -72,10 +77,10 @@ Use these rules:
 - If result location is important, ask Copilot to echo the full file path it wrote.
 - After completion, verify on disk with a local check (`Test-Path`, `Get-Item`, `Get-Content`).
 
-Safe dispatch example:
+Safe dispatch example (note: `/yolo` must be at the very beginning of the prompt):
 
 ```powershell
-Invoke-RestMethod -Uri "http://localhost:54321/ask-copilot" -Method Post -Body '{"query":"Create file at C:\\Users\\erden.aydogdu\\Desktop\\mbs-arcgisfree\\HelloWorld.md and write hello world. Use file edit tools. Reply SUBAGENT_FINISHED. /yolo","newSession":true}' -ContentType "application/json"
+Invoke-RestMethod -Uri "http://localhost:54321/ask-copilot" -Method Post -Body '{"query":"/yolo Create file at C:\\Users\\erden.aydogdu\\Desktop\\mbs-arcgisfree\\HelloWorld.md and write hello world. Use file edit tools. Reply SUBAGENT_FINISHED.","newSession":true}' -ContentType "application/json"
 ```
 
 ## 3. Dispatching the Task
