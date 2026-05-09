@@ -24,7 +24,7 @@ It acts as a local HTTP bridge (`127.0.0.1:54321`), allowing Claude to delegate 
 1. **Install the Extension:** Install `Claude Copilot Bridge` from the VS Code Marketplace in the VS Code window where you want Copilot to operate.
 2. **Add the Skill to Claude Code:** In the terminal where you use Claude Code, simply run the following command to easily install the skill:
    ```bash
-   npx skills add erimkun/claude-copilot-bridge@copilot-subagent
+   npx skills add erimkun/claude-copilot-bridge
    ```
 3. **Enjoy:** Start delegating tasks to Copilot!
 
@@ -58,7 +58,7 @@ Yerel bir HTTP köprüsü (`127.0.0.1:54321`) olarak çalışır ve Claude'un ka
 1. **Eklentiyi Kurun:** Copilot'un çalışacağı VS Code penceresine `Claude Copilot Bridge` eklentisini kurun.
 2. **Yeteneği Claude Code'a Ekleyin:** Claude Code kullandığınız terminalde kopyalanabilir şu komutu çalıştırarak yeteneği kolayca kurabilirsiniz:
    ```bash
-   npx skills add erimkun/claude-copilot-bridge@copilot-subagent
+   npx skills add erimkun/claude-copilot-bridge
    ```
 3. **Tadını Çıkarın:** Görevleri asistanlarınıza devretmeye başlayın!
 
