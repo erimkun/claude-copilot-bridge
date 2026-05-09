@@ -1,6 +1,6 @@
 {
-    "name":  "claude-copilot-bridge",
-    "displayName":  "Claude Copilot Bridge",
+    "name":  "claude-copilot-connector-erimkun",
+    "displayName":  "Claude Copilot Connector",
     "publisher":  "erimkun",
     "icon":  "icon.png",
     "description":  "Programmatic bridge between Claude and VS Code Copilot UI",

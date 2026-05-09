@@ -1,0 +1,17 @@
+.vscode/**
+.github/**
+.agents/**
+test-workspace/**
+src/**
+skills/**
+skills-lock.json
+payload.json
+PLAN.md
+HelloWorld.md
+BRIDGE_PROTOCOL.md
+COPILOT_DELEGATION_GUIDE.md
+icon.svg
+.gitignore
+tsconfig.json
+**/*.map
+*.log
