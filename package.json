@@ -4,7 +4,7 @@
     "publisher":  "erimkun",
     "icon":  "icon.png",
     "description":  "Programmatic bridge between Claude and VS Code Copilot UI",
-    "version":  "0.0.1",
+    "version":  "0.0.2",
     "repository": {
         "type": "git",
         "url": "https://github.com/erimkun/claude-copilot-bridge"
