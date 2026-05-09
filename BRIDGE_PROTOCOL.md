@@ -9,7 +9,8 @@ Claude, kendi terminal yeteneklerini kullanarak bu port üzerinden Copilot Chat'
 ## 2. Uyulması Gereken Kurallar ve Prompt Formatı
 
 ### A. Otomatik Onay (Bypass Approvals / Autopilot)
-Copilot'un terminal veya dosya düzenleme komutlarında kullanıcıya "Allow/Skip" butonu çıkarmaması için promptların başına her zaman `/yolo` (veya `/autoApprove`) eklenmelidir.
+Copilot'un terminal veya dosya düzenleme komutlarında kullanıcıya "Allow/Skip" butonu çıkarmaması için promptların en başına her zaman `/yolo` (veya `/autoApprove`) eklenmelidir.
+Prompt dili, kullanıcının isteğine göre Türkçe veya İngilizce olabilir.
 
 ### B. Özel Model (LLM) Seçimi
 Copilot'un farklı bir model (örn. GPT-4o, Claude 3.5 Sonnet) kullanması isteniyorsa, öncelikle çalışma dizininde (veya .github/prompts altında) bir frontmatter içeren `*.agent.md` dosyası oluşturulmalıdır.

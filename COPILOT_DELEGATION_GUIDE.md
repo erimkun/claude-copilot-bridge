@@ -23,7 +23,7 @@ To send Copilot a command, make a POST request. The `query` property is the exac
 
 **Example (PowerShell):**
 ```powershell
-$body = @{ query = "Please analyze src/main.js and fix any linting errors. Use your file edit tools. Reply with 'TASK_COMPLETE' when done." } | ConvertTo-Json
+$body = @{ query = "/yolo Please analyze src/main.js and fix any linting errors. Use your file edit tools. Reply with 'TASK_COMPLETE' when done." } | ConvertTo-Json
 Invoke-RestMethod -Uri "http://localhost:54321/ask-copilot" -Method Post -Body $body -ContentType "application/json"
 ```
 
@@ -46,9 +46,18 @@ When asking Copilot to perform tasks, you should format your instructions so Cop
 *   **Exact Targets:** Provide relative or absolute file paths so Copilot does not have to guess. (e.g., `Modify /src/features/map/Layers.tsx`).
 *   **Action Oriented:** Say `"Edit the file to include X"` rather than `"How do I include X?"`. Copilot must be explicitly told to apply changes.
 *   **Bypassing Tool Blocks:** (If terminal action is necessary) Remind Copilot to use `/yolo` or inform the user to activate `autoApprove` if it intends to run shell scripts.
+*   **Language:** Write the prompt in the user's requested language (Turkish or English).
 *   **Success Tokens:** Explicitly end your prompt by declaring a completion token:
     > *"When you have finished making all edits, output the exact phrase 'SUBAGENT_FINISHED'."*
     This lets Claude verify through the transcript that Copilot didn't stop typing midway due to an error.
+
+**Prompt examples:**
+- English: `/yolo Please update src/api/client.ts to add retry logic. Reply SUBAGENT_FINISHED.`
+- Turkish: `/yolo Lütfen src/api/client.ts dosyasina tekrar deneme (retry) mantigi ekle. SUBAGENT_FINISHED yaz.`
+
+**Alternative to `/yolo`:**
+If your environment uses `autoApprove`, you can use it as the first token instead:
+`/autoApprove Please update src/api/client.ts to add retry logic. Reply SUBAGENT_FINISHED.`
 
 ## 4. End-to-End Workflow for Claude
 1. **Define the Goal:** Formulate the string query for the objective.

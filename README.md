@@ -21,12 +21,20 @@ It acts as a local HTTP bridge (`127.0.0.1:54321`), allowing Claude to delegate 
 3. **Execution:** Claude sends an HTTP POST request to the bridge. The bridge opens Copilot Chat and types the prompt. Copilot does the heavy lifting, and the result is sent back to Claude!
 
 ## 📦 Installation & Usage
-1. **Install the Extension:** Install `Claude Copilot Bridge` from the VS Code Marketplace.
-2. **Add the Skill to Claude Code:** In your terminal, run:
+1. **Install the Extension:** Install `Claude Copilot Bridge` from the VS Code Marketplace in the VS Code window where you want Copilot to operate.
+2. **Add the Skill to Claude Code:** In the terminal where you use Claude Code, simply run the following command to easily install the skill:
    ```bash
-   npx skills add <YOUR-GITHUB-REPO>@copilot-subagent
+   npx skills add erimkun/claude-copilot-bridge@copilot-subagent
    ```
-3. **Enjoy:** Ask Claude: *"Hey Claude, ask Copilot to refactor this file."*
+3. **Enjoy:** Start delegating tasks to Copilot!
+
+**Prompt examples:**
+
+**1. What you should say to Claude (Initial Request):**
+- *"Hey Claude, use the Claude Copilot Bridge to assign Copilot as a subagent and ask it to refactor src/utils/date.ts."*
+
+**2. What Claude actually sends to Copilot (Under the hood):**
+- `/yolo Please refactor src/utils/date.ts and remove unused imports. Reply SUBAGENT_FINISHED.`
 
 ---
 
@@ -47,10 +55,18 @@ Yerel bir HTTP köprüsü (`127.0.0.1:54321`) olarak çalışır ve Claude'un ka
 3. **Çalışma Anı:** Claude, köprüye bir HTTP POST isteği atar. Köprü de Copilot Chat'i açıp otomatik olarak kod yazdırır. Copilot işlemi bitirince sonuç tekrar Claude'a iletilir.
 
 ## 📦 Kurulum ve Kullanım
-1. **Eklentiyi Kurun:** VS Code Marketplace üzerinden `Claude Copilot Bridge` eklentisini indirin.
-2. **Yetenekleri Claude Code'a Ekleyin:** Terminalinizi açın ve şunu yazın:
+1. **Eklentiyi Kurun:** Copilot'un çalışacağı VS Code penceresine `Claude Copilot Bridge` eklentisini kurun.
+2. **Yeteneği Claude Code'a Ekleyin:** Claude Code kullandığınız terminalde kopyalanabilir şu komutu çalıştırarak yeteneği kolayca kurabilirsiniz:
    ```bash
-   npx skills add <SİZİN-GITHUB-REPONUZ>@copilot-subagent
+   npx skills add erimkun/claude-copilot-bridge@copilot-subagent
    ```
-3. **Tadını Çıkarın:** Claude'a şu komutu verin: *"Hey Claude, şu dosyayı Copilot'a refactor ettir."*
+3. **Tadını Çıkarın:** Görevleri asistanlarınıza devretmeye başlayın!
+
+**Prompt örnekleri:**
+
+**1. Sizin Claude'a vereceğiniz komut (İlk İstek):**
+- *"Hey Claude, Claude Copilot Bridge ile Copilot'u subagent olarak ata ve src/utils/date.ts dosyasını refactor etmesini söyle."*
+
+**2. Claude'un Copilot'a ilettiği komut (Arka planda çalışan):**
+- `/yolo Lütfen src/utils/date.ts dosyasını refactor et ve kullanılmayan importları sil. SUBAGENT_FINISHED yaz.`
 
