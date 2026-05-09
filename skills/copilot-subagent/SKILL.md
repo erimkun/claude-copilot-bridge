@@ -1,4 +1,4 @@
-﻿---
+---
 name: copilot-subagent
 description: Workflow to delegate coding tasks, bulk refactors, or specialized edits to GitHub Copilot Chat through the local bridge extension.
 ---
